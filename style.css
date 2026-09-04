@@ -1,12 +1,970 @@
-a { 
-    padding: 10px;
-    color: black;
-    text-decoration: none;
+/* ENCABEZADO */
+header {
+  background-color: #f5eee4;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #d8c7b5;
 }
-.producto img {
-  width: 250px;
-  height: 200px;
+
+/* NOMBRE DE LA PASTELERÍA */
+header h1 {
+  color: #5a3825;
+  font-family: Georgia, serif;
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin: 0 0 30px 0;
+}
+
+/* MENÚ */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* BOTONES */
+nav a {
+  width: 130px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fffaf4;
+  color: #5a3825;
+
+  border: 1px solid #b99b7d;
+  border-radius: 0;
+
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+/* SECCIÓN PRINCIPAL */
+.hero {
+  background-color: #f5eee4;
+  padding: 70px 30px;
+  text-align: center;
+}
+
+/* TÍTULO */
+.hero h2 {
+  color: #5a3825;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+
+/* IMAGEN */
+.hero .imagen {
+  width: 70%;
+  max-width: 850px;
+  height: 400px;
   object-fit: cover;
-  display: block;
-  margin: 0 auto;
+
+  border: 1px solid #b99b7d;
+  box-shadow: 0 8px 20px rgba(90, 56, 37, 0.18);
+}```css
+/* ==============================
+   ESTILOS GENERALES
+   ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f3e8;
+  color: #4b3a2f;
+  line-height: 1.6;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+  background-color: #6b8e5e;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f5d9a6;
+}
+
+
+/* ==============================
+   HERO
+   ============================== */
+
+.hero {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #eee4d0;
+}
+
+.hero h2 {
+  font-size: 42px;
+  color: #4b3a2f;
+  margin-bottom: 30px;
+}
+
+.imagen {
+  width: 80%;
+  max-width: 850px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==============================
+   PRODUCTOS
+   ============================== */
+
+.productos {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.productos > h2 {
+  font-size: 36px;
+  margin-bottom: 45px;
+  color: #5f7d52;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+/* ==============================
+   TARJETAS DE PRODUCTOS
+   ============================== */
+
+.producto {
+  background-color: white;
+  border-radius: 18px;
+  padding: 25px;
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.producto h3 {
+  color: #6b8e5e;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  color: #6b5a4d;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+/* ==============================
+   IMÁGENES DE PRODUCTOS
+   ============================== */
+
+.imagen2,
+.imagen3,
+.imagen4 {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+
+/* ==============================
+   SECCIONES DE INFORMACIÓN
+   ============================== */
+
+.info {
+  padding: 70px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #e8dfcc;
+}
+
+.info:nth-child(even) {
+  background-color: #f8f3e8;
+}
+
+.info-texto {
+  max-width: 750px;
+}
+
+.info h2 {
+  color: #5f7d52;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 18px;
+  color: #5d4c40;
+}
+
+
+/* ==============================
+   HORARIOS
+   ============================== */
+
+.info-dato {
+  background-color: #ffffff;
+  padding: 25px 35px;
+  border-radius: 15px;
+  min-width: 220px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-dato h3 {
+  color: #6b8e5e;
+  margin-bottom: 8px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+  background-color: #4b3a2f;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer p:first-child {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+footer p:last-child {
+  color: #e5d8c2;
+}
+
+
+/* ==============================
+   RESPONSIVE - TABLET
+   ============================== */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 20px 5%;
+  }
+
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h2 {
+    font-size: 35px;
+  }
+
+  .info {
+    padding: 60px 7%;
+  }
+}
+
+
+/* ==============================
+   RESPONSIVE - CELULAR
+   ============================== */
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    position: static;
+  }
+
+  header h1 {
+    font-size: 27px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero {
+    min-height: 450px;
+    padding: 40px 15px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .imagen {
+    width: 100%;
+    height: 250px;
+  }
+
+  .productos {
+    padding: 50px 20px;
+  }
+
+  .productos > h2 {
+    font-size: 30px;
+  }
+
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .producto {
+    min-height: 380px;
+  }
+
+  .info {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 25px;
+  }
+
+  .info h2 {
+    font-size: 28px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .info-dato {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   DULCE RAMON - ESTILO RÚSTICO ELEGANTE
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eee3d0;
+  color: #daaf92;
+}
+
+
+/* =========================================
+   TÍTULOS
+   ========================================= */
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+  background: #5a4030;
+  color: #f4ead8;
+  padding: 22px 8%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 4px solid #c5a47e;
+}
+
+header h1 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  color:#a98766
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f4ead8;
+
+  background: #765642;
+
+  padding: 12px 18px;
+
+  border: 1px solid #a98766;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #d1b28b;
+  color: #4a3527;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+
+  position: relative;
+
+  background-image:
+    linear-gradient(
+      rgba(70, 45, 30, 0.45),
+      rgba(70, 45, 30, 0.45)
+    ),
+    url("imagenes/instituto-camila-costantini-icc-curso-pasteleria-saludable.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* Ocultamos la imagen porque ahora se utiliza como fondo */
+
+.hero .imagen {
+  display: none;
+}
+
+.hero h2 {
+  color: #fff8eb;
+
+  font-size: 50px;
+  font-weight: normal;
+
+  max-width: 800px;
+
+  text-shadow: 2px 2px 8px #392519;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PRODUCTOS
+   ========================================= */
+
+.productos {
+  padding: 90px 8%;
+
+  background: #eee3d0;
+
+  text-align: center;
+}
+
+.productos > h2 {
+  color: #5a4030;
+
+  font-size: 40px;
+  font-weight: normal;
+
+  margin-bottom: 50px;
+}
+
+.productos > h2::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 2px;
+
+  background: #a98766;
+
+  margin: 15px auto 0;
+}
+
+
+/* =========================================
+   GRID
+   ========================================= */
+
+.grid-productos {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+
+/* =========================================
+   TARJETAS DE PRODUCTOS
+   ========================================= */
+
+.producto {
+  min-height: 430px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  text-align: left;
+
+  border: 1px solid #b99a77;
+
+  box-shadow: 0 8px 20px rgba(70, 45, 30, 0.18);
+
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+
+/* Fondo de cada producto */
+
+.producto::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* Capa oscura sobre la imagen */
+
+.producto::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(45, 28, 18, 0.90),
+    rgba(45, 28, 18, 0.25),
+    rgba(45, 28, 18, 0.05)
+  );
+}
+
+
+/* Imagen de Budines */
+
+.producto:nth-child(1)::before {
+  background-image: url("imagenes/images.jpg");
+}
+
+
+/* Imagen de Cookies */
+
+.producto:nth-child(2)::before {
+  background-image: url("imagenes/images (1).jpg");
+}
+
+
+/* Imagen de Mesas dulces */
+
+.producto:nth-child(3)::before {
+  background-image: url("imagenes/sweet-table-biscuits-candy-party-260nw-1683802045.webp");
+}
+
+
+/* Efecto al pasar el mouse */
+
+.producto:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 30px rgba(70, 45, 30, 0.28);
+}
+
+.producto:hover::before {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   TEXTO DE LOS PRODUCTOS
+   ========================================= */
+
+.producto > div {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 25px;
+}
+
+.producto h3 {
+  color: #fff5e5;
+
+  font-size: 29px;
+  font-weight: normal;
+
+  margin-bottom: 10px;
+}
+
+.producto p {
+  color: #f5ead9;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* Ocultamos las imágenes originales */
+
+.producto img {
+  display: none;
+}
+
+
+/* =========================================
+   SECCIONES DE INFORMACIÓN
+   ========================================= */
+
+.info {
+  min-height: 320px;
+
+  padding: 80px 10%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 60px;
+
+  background: #d9c5a9;
+
+  border-top: 1px solid #b99a77;
+}
+
+
+/* Segunda sección con un tono diferente */
+
+#sobre-nosotros {
+  background: #eee3d0;
+}
+
+
+.info-texto {
+  max-width: 750px;
+}
+
+.info h2 {
+  color: #5a4030;
+
+  font-size: 38px;
+  font-weight: normal;
+
+  margin-bottom: 20px;
+}
+
+.info h2::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 2px;
+
+  background: #a98766;
+
+  margin-top: 12px;
+}
+
+.info p {
+  color: #604938;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   HORARIOS
+   ========================================= */
+
+.info-dato {
+  min-width: 250px;
+
+  padding: 30px;
+
+  background: #f5ead8;
+
+  border: 1px solid #b99a77;
+
+  box-shadow: 0 6px 15px rgba(70, 45, 30, 0.12);
+
+  text-align: center;
+}
+
+.info-dato h3 {
+  color: #5a4030;
+
+  font-size: 25px;
+
+  font-weight: normal;
+
+  margin-bottom: 10px;
+}
+
+.info-dato p {
+  font-size: 15px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  background: #4a3527;
+
+  color: #f5ead8;
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  border-top: 4px solid #a98766;
+}
+
+footer p:first-child {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+footer p:last-child {
+  color: #d9c5a9;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 20px 5%;
+  }
+
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+
+    gap: 20px;
+
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: 500px;
+
+    background-attachment: scroll;
+  }
+
+  .hero h2 {
+    font-size: 35px;
+  }
+
+
+  /* Productos */
+
+  .productos {
+    padding: 60px 20px;
+  }
+
+  .productos > h2 {
+    font-size: 34px;
+  }
+
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+
+  .producto {
+    min-height: 400px;
+  }
+
+
+  /* Información */
+
+  .info {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 60px 25px;
+
+    gap: 35px;
+  }
+
+  .info h2 {
+    font-size: 32px;
+  }
+
+  .info-dato {
+    width: 100%;
+  }
+
+
+  /* Footer */
+
+  footer {
+    padding: 30px 15px;
+  }
+}
+```
